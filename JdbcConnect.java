@@ -29,5 +29,16 @@ public class JdbcConnect
 			// 1st step load the driver
 			e.printStackTrace();
 		}
+		finally {
+        	try {
+				pst.close();
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+        	
+        }
+		System.out.println(check);
     }
 }
