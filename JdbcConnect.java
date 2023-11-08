@@ -34,7 +34,7 @@ public class JdbcConnect
 				pst.close();
 				con.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+				// last step finally block to close connection
 				e.printStackTrace();
 			}
         	
