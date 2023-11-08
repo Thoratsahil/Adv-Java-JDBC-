@@ -1,3 +1,5 @@
+//this code is totally written in the Eclipse IDE 2022-12
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -12,7 +14,7 @@ public class JdbcConnect
 		int check=0;
         try {
 
-			Class.forName("com.mysql.cj.jdbc.Driver.class");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/dbconnectivitypractice", "root", null); //This is second step connection
 
 			String sql="insert into student(Name,Address,contact) values(?,?,?) "; //3rd step create query
