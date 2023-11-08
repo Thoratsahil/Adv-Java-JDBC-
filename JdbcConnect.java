@@ -9,6 +9,7 @@ public class JdbcConnect
     {
 		Connection con=null; 
 		PreparedStatement pst=null;
+		int check=0;
         try {
 
 			Class.forName("com.mysql.cj.jdbc.Driver.class");
@@ -20,6 +21,8 @@ public class JdbcConnect
 			pst.setString(1, "Sayluu");
 			pst.setString(2, "Sangli");
 			pst.setString(3, "9139223344"); //this is 4th step create connection
+
+			check=pst.executeUpdate(); //5th step executeupdate()
 
 
 		} catch (ClassNotFoundException | SQLException e) {
