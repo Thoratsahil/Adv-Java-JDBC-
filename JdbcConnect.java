@@ -41,6 +41,6 @@ public class JdbcConnect
 			}
         	
         }
-		System.out.println(check);
+		System.out.println(check); // its indicates its works or not
     }
 }
